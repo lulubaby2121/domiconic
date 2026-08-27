@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f5;
+    color: #27272a;
+}
+
+header {
+    background: #27272a;
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 6px 0 0;
+    color: #d4d4d8;
+}
+
+header span {
+    background: #3f3f46;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+header button {
+    background: #e11d48;
+    color: white;
+    border: 0;
+    padding: 9px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+main {
+    width: min(1100px, 92%);
+    margin: 30px auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card,
+.panel {
+    background: white;
+    border: 1px solid #e4e4e7;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 5px 18px #0000000d;
+}
+
+.card span {
+    color: #71717a;
+    font-size: 14px;
+}
+
+.card strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 25px;
+    color: #27272a;
+}
+
+.panel {
+    margin-top: 22px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #27272a;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+}
+
+label {
+    font-weight: bold;
+    color: #3f3f46;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #d4d4d8;
+    border-radius: 8px;
+    background: white;
+    color: #27272a;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #e11d48;
+    box-shadow: 0 0 0 3px #e11d4815;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 19px;
+    background: #e11d48;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #be123c;
+}
+
+.secondary {
+    background: #e4e4e7;
+    color: #3f3f46;
+}
+
+.secondary:hover {
+    background: #d4d4d8;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.table-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.table-head input {
+    max-width: 250px;
+    margin: 0;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #e4e4e7;
+    text-align: left;
+}
+
+th {
+    color: #52525b;
+    font-size: 14px;
+}
+
+td {
+    color: #3f3f46;
+}
+
+td button {
+    padding: 7px 11px;
+    margin-right: 4px;
+    font-size: 13px;
+}
+
+.edit {
+    background: #52525b;
+}
+
+.edit:hover {
+    background: #3f3f46;
+}
+
+.delete {
+    background: #e11d48;
+}
+
+.delete:hover {
+    background: #be123c;
+}
+
+/* LOGIN E CADASTRO */
+
+.login,
+.cadastro {
+    width: 90%;
+    max-width: 420px;
+    margin: 70px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid #e4e4e7;
+    box-shadow: 0 10px 30px #00000012;
+}
+
+.login h1,
+.cadastro h1 {
+    text-align: center;
+    color: #27272a;
+    margin-bottom: 8px;
+}
+
+.login p,
+.cadastro p {
+    text-align: center;
+    color: #71717a;
+}
+
+.login label,
+.cadastro label {
+    display: block;
+    margin-top: 16px;
+}
+
+.login button,
+.cadastro button {
+    width: 100%;
+    margin-top: 22px;
+}
+
+.login a,
+.cadastro a {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    color: #e11d48;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login a:hover,
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+#mensagem {
+    text-align: center;
+    margin-top: 15px;
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+    .cards,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    header span {
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    header button {
+        margin-top: 12px;
+    }
+
+    .table-head {
+        display: block;
+    }
+
+    .table-head input {
+        max-width: none;
+        margin-top: 10px;
+    }
+
+    .login,
+    .cadastro {
+        margin: 30px auto;
+        padding: 25px;
+    }
+}
